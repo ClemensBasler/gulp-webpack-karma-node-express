@@ -1,6 +1,7 @@
 /*
  * Unit tests for lib/calculator.js
  */
+// import * from 'src/cats.js';
 
 describe('Test', function() {
 

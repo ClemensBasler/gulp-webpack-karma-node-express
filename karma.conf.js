@@ -1,6 +1,6 @@
 // Karma configuration
 // Generated on Fri Jul 08 2016 14:20:35 GMT+0200 (CEST)
-const webpackConfig = require('./webpack.config');
+var webpackConfig = require('./webpack.config');
 
 module.exports = function(config) {
   config.set({
@@ -13,19 +13,17 @@ module.exports = function(config) {
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['jasmine'],
 
+    webpack: webpackConfig,
 
     // list of files / patterns to load in the browser
     files: [
-      // 'src/*.js',
       'test/test.test.js'
     ],
 
     preprocessors: {
     // add webpack as preprocessor
-    'test/tets.test.js': ['webpack']
+    'test/test.test.js': ['webpack']
     },
-
-    webpack: webpackConfig,
 
     // list of files to exclude
     exclude: [
